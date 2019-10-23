@@ -2,7 +2,9 @@
   "name": "testing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://brobertson3.github.io/base-apparel-coming-soon/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
