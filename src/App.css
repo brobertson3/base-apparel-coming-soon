@@ -1,22 +1,195 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+html {
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-size: 0.8rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+}
+
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column wrap;
+  height: auto;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
 }
 
-.App-link {
-  color: #09d3ac;
+.logo-container {
+  order: 1;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+}
+
+.logo-container img {
+  width: 30%;
+  height: auto;
+}
+
+.hero-container {
+  order: 2;
+  width: 100%;
+  height: 65vw;
+  background: url("./images/hero-mobile.jpg") no-repeat;
+  background-size: cover;
+}
+
+.content-container {
+  padding: 30px 40px 50px;
+  order: 3;
+  width: 100%;
+  height: auto;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.8;
+  color: hsl(0, 36%, 70%);
+}
+
+.content-container h1 {
+  font-size: 2.5rem;
+  /* padding: 0 10%; */
+  letter-spacing: 12px;
+  line-height: 1.1;
+  color: hsl(0, 6%, 24%);
+  margin-bottom: 20px;
+}
+
+.content-container span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.content-container h1,
+.content-container p {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  height: 45px;
+  max-width: 500px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.content-container #email-input,
+.content-container #submit-button {
+  height: 45px;
+}
+
+.content-container #email-input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 3em;
+  border: 1px solid hsl(0, 36%, 85%);
+  background-color: transparent;
+  padding-left: 20px;
+}
+
+.content-container #submit-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  right: 0;
+  border: 0 solid hsl(0, 74%, 74%);
+  border-radius: 3.5em;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0px 14px 17px 2px hsla(0, 74%, 74%, 0.3);
+}
+
+::placeholder {
+  color: hsl(0, 36%, 85%);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Tablet styling */
+@media only screen and (min-width: 600px) {
+}
+
+/* Desktop styling */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .main-container {
+    height: 100vh;
+  }
+
+  .logo-container {
+    width: 55%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 15vh;
+  }
+
+  .hero-container {
+    background-image: url("./images/hero-desktop.jpg");
+    order: 3;
+    width: 45%;
+    height: 100vh;
+  }
+
+  .content-container {
+    order: 2;
+    width: 55%;
+    height: 85vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+  }
+
+  .content-container p,
+  .content-container h1 {
+    max-width: 400px;
+    margin-left: 0;
+  }
+
+  .content-container h1 {
+    padding-left: 0;
+    font-size: 3.5rem;
+  }
+
+  form {
+    max-width: 400px;
+    margin-top: 40px;
+    height: 50px;
+    transform: translateX(0);
+    left: 0;
+  }
+
+  .content-container #submit-button,
+  .content-container #email-input {
+    height: 50px;
+  }
+
+  .content-container #submit-button {
+    width: 90px;
+  }
 }
